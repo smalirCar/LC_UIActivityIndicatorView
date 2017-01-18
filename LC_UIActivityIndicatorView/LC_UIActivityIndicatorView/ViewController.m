@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor greenColor];
     [self createActivityIndicator];
-    [self createActivityIndicator];
+    [self createControlAnimatingButton];
 }
 
 #pragma mark - 创建控制进度指示器是否出现的的 button
@@ -28,6 +28,7 @@
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:_button];
     self.button.frame = CGRectMake(10, 10, 200, 100);
+    self.button.backgroundColor = [UIColor redColor];
     [self.button setTitle:@"关闭" forState:UIControlStateNormal];
     [self.button addTarget:self action:@selector(startOrStop:) forControlEvents:UIControlEventTouchUpInside];
     
